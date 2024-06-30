@@ -1,5 +1,6 @@
+//variable que guarda  Api
 const UrlFetch = 'https://api.yumserver.com/16977/products';
-
+//funcion para agregar productos,usa el metodo Post sobre la Api
 function agregarproducto() {
     fetch(UrlFetch, {
         method: 'POST',
@@ -27,7 +28,7 @@ function agregarproducto() {
     })
     .catch(error => console.error('Error:', error));
 }
-
+//funcion para obtener productos cargados en api utilizando el metodo Get 
     function obtenerproductos(){
     fetch(UrlFetch)
     .then(response => response.json())
@@ -55,6 +56,7 @@ function mostrarproducts(productos) {
     };
     document.getElementById('resultados').innerHTML = html;
 }
+//se utiliza para que no aparezcan al mismo tiempo el formulario de modificar y la lista de productos
 function mostrar(div) {
   const ids=['lista','modificarproducto']
     for (let i = 0;  i< ids.length; i++) {
@@ -63,12 +65,13 @@ function mostrar(div) {
     document.getElementById(div).removeAttribute('style')
 }
 
-
+//funcion que se realiza antes de la funcion modificar
 function prepararModificar(_idcod) {       
     mostrar('modificarproducto');
     let html=`<button onclick="Modificar('${_idcod}')" class="btnpreparar">Modificar</button>`
     document.getElementById('botonMod').innerHTML=html
 }
+//se usa para cambiar valores de un idcod seleccionado,utilizando el metodo Patch sobre la Api
 function Modificar(_idcod){
 fetch(UrlFetch,{
     method:'PATCH',
@@ -94,6 +97,7 @@ fetch(UrlFetch,{
 })
 .catch(error=>console.error('Error',error))
 }
+//elimina producto seleccionadoo,usa metodo Delete sobre Api
 function Eliminar(_idcod){
     if (confirm("¿Está seguro de que desea eliminar este producto?")) {
     fetch(UrlFetch,{
