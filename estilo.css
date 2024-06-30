@@ -1,0 +1,246 @@
+/*se aplica a todo el documento*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/*para acomodar el ancho y altura de página*/
+}
+.lista_contenedor{    
+    display: flex;    
+    margin-left: 250px;
+    width: 70vw;
+    overflow-x: auto;
+   
+}
+.contenedor {
+    padding: 20px;
+}
+table{
+    border-collapse: collapse;
+}
+th,td{
+    border: 1px solid rgb(44, 68, 45);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.83);
+    color: white;
+}
+
+.logo{
+    width: 100px;
+}
+body{
+    background-color: cadetblue;
+}
+
+header{
+    display: flex;    
+    align-items:center;
+    justify-content: space-between;
+    background-color:rgb(23, 23, 33);  
+    color: white;
+    font-family:Perpetua, Baskerville, Big Caslon, Palatino Linotype, Palatino, serif;
+    
+    
+}
+header h1 {
+    margin-right: 300px;
+}
+header nav a {
+    margin: 0 10px;
+}
+
+footer h1{
+    color: white;
+}
+
+
+.btn_header-desktop a:hover,.btn_header-mobile a:hover{
+    background-color:steelblue;
+    color: white;
+
+}
+.btn_header-desktop{
+    display: flex;        
+    align-items: center;    
+}
+.btn_header-desktop a,.btn_header-mobile a {
+    background-color: rgb(23, 23, 33);
+    color: darkgrey;
+    padding: 5px 15px;
+    text-decoration: none;
+    transition: 0.5s;
+    font-size: 14px;
+}
+.botonmodificar, .botonborrar {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 7px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.secmodificar,.secagregar{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 30px;    
+}
+.modificarprod{
+    border: 1px solid rgba(124, 151, 200, 0.741);
+    padding: 30px;    
+    background-color:rgba(124, 151, 200, 0.741);
+    border-radius: 10px;    
+    font-family: Geneva, Arial, Helvetica, sans-serif;    
+}
+
+.btnpreparar{
+    margin-top: 70px;
+    width: 200px;
+    padding:5px;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: white;
+    margin-left: 30px;        
+}
+.modificarprod input{
+    border-radius: 7px;
+    border:1px solid white;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;    
+}
+
+.agregarprod input{
+    border-radius: 7px;
+    border:1px solid white;    
+}
+.modificarprod h1,.agregarprod h1{    
+    color: white;
+}
+.btnagregar{
+    margin-top: 70px;
+    width: 200px;
+    padding:5px;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: white;
+}
+.agregarprod{
+    border: 1px solid rgba(124, 151, 200, 0.741);
+    padding: 85px;
+    padding-bottom: 70px;
+    padding-top: 30px;
+    margin-top: 10px;
+    background-color:rgba(124, 151, 200, 0.741);
+    border-radius: 10px;
+    line-height:30px;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+}
+.agregarprod h1{
+    margin-right: 15px;     
+    padding-right: 7px;
+}
+
+footer {
+    display: flex;    
+    align-items: center;
+    background-color: rgb(23, 23, 33);
+    color: white;
+    padding: 20px;
+    width: 100%;
+    margin-top: auto;
+}
+footer p{
+    position: relative;        
+    top: 50px;
+    left: 50px;
+    color:white;
+    font-size: 13px;
+    opacity: 0.5;
+    font-family: "EB Garamond", serif;    
+}
+
+.instagram{
+    display: flex; 
+    position: relative;    
+    color: white;
+    text-decoration:none;    
+    top: 40px;
+}
+
+.instagram:hover{
+    color:red;
+}
+
+.btn_header-mobile {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.articulo-inicio{
+    display: flex;
+    align-items: center;
+   flex-direction: column;
+   margin-top: 40px; 
+   margin-bottom: 10px;     
+}
+.titulo-articulo_inicio{    
+    font-size: 30px;
+    font-family:sans-serif
+}
+.texto-articulo_inicio{    
+    font-size: 15px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+.contenedor_img{
+    overflow: hidden;
+    width: 100%;
+        
+}
+.imagen_inicio{
+    width: 100%;
+    height: auto;
+    display: block;
+
+}
+
+@media(max-width:850px)
+{          
+    header{        
+        flex-direction: column;                          
+        align-items: flex-start;       
+    }  
+    header h1{
+        margin: 0px;
+    } 
+    .btn_header-mobile {
+        display: flex;
+        width: 100%;
+    } 
+    .btn_header-desktop{
+        display: none;
+    }
+    .lista_contenedor {
+        margin-left: 0;
+        width: 100%;
+    }            
+    footer {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    footer p, footer .instagram {
+        width: 100%;
+        text-align: center;
+    }    
+    .instagram{
+        top: 0;        
+    }
+    footer p{
+        top: 10px;
+        left: 0;
+    }
+    
+}
+
+
